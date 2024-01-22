@@ -16,8 +16,8 @@ class Game:
 
     def play(self):
         while True:
-            self.board.display()
             self.current_player.make_move(self.board)
+            self.board.display()
             if self.board.is_winner(self.current_player.symbol):
                 self.board.display()
                 print(f"Player {self.current_player.symbol} wins!")
